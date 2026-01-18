@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://amdcom.id", // GANTI DOMAIN
+    url: "https://amdcom.vercel.app", // GANTI DOMAIN
     siteName: "AMD COM",
     title: "AMD COM | IT Solution & Computer Service",
     description:
