@@ -86,7 +86,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
             Solusi IT Profesional<br />
-            <span className="text-yellow-300">Cepat • Rapi • Terpercaya</span>
+            <span className="text-yellow-300">Cepat • Terpercaya</span>
           </h1>
 
           <p className="text-lg md:text-xl opacity-95 mb-10">
