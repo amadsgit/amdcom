@@ -61,8 +61,18 @@ export default function Home() {
             <a
               href="https://wa.me/6281236208542"
               target="_blank"
-              className="bg-green-500 hover:bg-green-600 active:scale-95 text-white px-6 py-2 rounded-full font-semibold shadow-lg transition"
+              className="flex items-center gap-2 bg-green-500 hover:bg-green-600 active:scale-95 
+                        text-white px-6 py-2 rounded-full font-semibold shadow-lg transition"
             >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                fill="currentColor"
+                className="w-5 h-5"
+              >
+                <path d="M19.11 17.38c-.28-.14-1.64-.81-1.9-.9-.25-.09-.44-.14-.62.14-.18.28-.71.9-.87 1.08-.16.18-.32.21-.6.07-.28-.14-1.18-.44-2.24-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.35-.02-.49-.07-.14-.62-1.5-.85-2.05-.22-.53-.45-.46-.62-.47-.16-.01-.35-.01-.53-.01-.18 0-.49.07-.74.35-.25.28-.98.96-.98 2.35 0 1.39 1.01 2.73 1.15 2.92.14.18 1.99 3.04 4.82 4.26.67.29 1.2.47 1.61.6.68.22 1.3.19 1.79.12.55-.08 1.64-.67 1.87-1.32.23-.65.23-1.21.16-1.32-.07-.11-.25-.18-.53-.32z" />
+                <path d="M16.02 3C8.84 3 3 8.84 3 16.02c0 2.82.74 5.58 2.14 8.01L3 29l5.13-2.06c2.36 1.29 5.02 1.98 7.89 1.98 7.18 0 13.02-5.84 13.02-13.02C29.04 8.84 23.2 3 16.02 3zm0 23.63c-2.55 0-5.05-.68-7.22-1.97l-.52-.31-3.04 1.22.99-3.13-.34-.54a10.62 10.62 0 01-1.67-5.73c0-5.87 4.78-10.65 10.65-10.65 5.87 0 10.65 4.78 10.65 10.65 0 5.87-4.78 10.65-10.65 10.65z" />
+              </svg>
               WhatsApp
             </a>
           </nav>
@@ -96,9 +106,20 @@ export default function Home() {
 
               <a
                 href="https://wa.me/6281236208542"
-                className="bg-green-500 text-white text-center py-3 rounded-full font-semibold shadow-md active:scale-95 transition"
+                target="_blank"
+                className="flex items-center gap-2 bg-green-500 hover:bg-green-600 active:scale-95 
+                          text-white px-6 py-2 rounded-full font-semibold shadow-lg transition"
               >
-                Hubungi via WhatsApp
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 32 32"
+                  fill="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path d="M19.11 17.38c-.28-.14-1.64-.81-1.9-.9-.25-.09-.44-.14-.62.14-.18.28-.71.9-.87 1.08-.16.18-.32.21-.6.07-.28-.14-1.18-.44-2.24-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.35-.02-.49-.07-.14-.62-1.5-.85-2.05-.22-.53-.45-.46-.62-.47-.16-.01-.35-.01-.53-.01-.18 0-.49.07-.74.35-.25.28-.98.96-.98 2.35 0 1.39 1.01 2.73 1.15 2.92.14.18 1.99 3.04 4.82 4.26.67.29 1.2.47 1.61.6.68.22 1.3.19 1.79.12.55-.08 1.64-.67 1.87-1.32.23-.65.23-1.21.16-1.32-.07-.11-.25-.18-.53-.32z" />
+                  <path d="M16.02 3C8.84 3 3 8.84 3 16.02c0 2.82.74 5.58 2.14 8.01L3 29l5.13-2.06c2.36 1.29 5.02 1.98 7.89 1.98 7.18 0 13.02-5.84 13.02-13.02C29.04 8.84 23.2 3 16.02 3zm0 23.63c-2.55 0-5.05-.68-7.22-1.97l-.52-.31-3.04 1.22.99-3.13-.34-.54a10.62 10.62 0 01-1.67-5.73c0-5.87 4.78-10.65 10.65-10.65 5.87 0 10.65 4.78 10.65 10.65 0 5.87-4.78 10.65-10.65 10.65z" />
+                </svg>
+                WhatsApp
               </a>
             </div>
           </div>
@@ -128,15 +149,41 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row justify-center gap-5">
             <a
               href="#services"
-              className="bg-white text-blue-600 px-10 py-4 rounded-full font-semibold shadow-xl hover:scale-105 active:scale-95 transition"
+              className="flex items-center gap-3 bg-white text-blue-600 
+                        px-10 py-4 rounded-full font-semibold shadow-xl 
+                        hover:scale-105 active:scale-95 transition"
             >
-              Lihat Layanan
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-5 h-5 shrink-0"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+
+              <span>Lihat Layanan</span>
             </a>
             <a
               href="https://wa.me/6281236208542"
-              className="bg-green-500 hover:bg-green-600 px-10 py-4 rounded-full font-semibold shadow-xl hover:scale-105 active:scale-95 transition"
+              className="bg-green-500 flex hover:bg-green-600 px-10 py-4 rounded-full font-semibold shadow-xl hover:scale-105 active:scale-95 transition"
             >
-              Konsultasi WhatsApp
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 32 32"
+                  fill="currentColor"
+                  className="w-5 h-5 mx-2"
+                >
+                  <path d="M19.11 17.38c-.28-.14-1.64-.81-1.9-.9-.25-.09-.44-.14-.62.14-.18.28-.71.9-.87 1.08-.16.18-.32.21-.6.07-.28-.14-1.18-.44-2.24-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.35-.02-.49-.07-.14-.62-1.5-.85-2.05-.22-.53-.45-.46-.62-.47-.16-.01-.35-.01-.53-.01-.18 0-.49.07-.74.35-.25.28-.98.96-.98 2.35 0 1.39 1.01 2.73 1.15 2.92.14.18 1.99 3.04 4.82 4.26.67.29 1.2.47 1.61.6.68.22 1.3.19 1.79.12.55-.08 1.64-.67 1.87-1.32.23-.65.23-1.21.16-1.32-.07-.11-.25-.18-.53-.32z" />
+                  <path d="M16.02 3C8.84 3 3 8.84 3 16.02c0 2.82.74 5.58 2.14 8.01L3 29l5.13-2.06c2.36 1.29 5.02 1.98 7.89 1.98 7.18 0 13.02-5.84 13.02-13.02C29.04 8.84 23.2 3 16.02 3zm0 23.63c-2.55 0-5.05-.68-7.22-1.97l-.52-.31-3.04 1.22.99-3.13-.34-.54a10.62 10.62 0 01-1.67-5.73c0-5.87 4.78-10.65 10.65-10.65 5.87 0 10.65 4.78 10.65 10.65 0 5.87-4.78 10.65-10.65 10.65z" />
+                </svg> 
+               Konsultasi WhatsApp
             </a>
           </div>
 
@@ -245,6 +292,15 @@ export default function Home() {
               href="https://wa.me/6281236208542"
               className="inline-flex items-center gap-4 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:scale-105 active:scale-95 transition"
             >
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 32 32"
+                  fill="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path d="M19.11 17.38c-.28-.14-1.64-.81-1.9-.9-.25-.09-.44-.14-.62.14-.18.28-.71.9-.87 1.08-.16.18-.32.21-.6.07-.28-.14-1.18-.44-2.24-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.35-.02-.49-.07-.14-.62-1.5-.85-2.05-.22-.53-.45-.46-.62-.47-.16-.01-.35-.01-.53-.01-.18 0-.49.07-.74.35-.25.28-.98.96-.98 2.35 0 1.39 1.01 2.73 1.15 2.92.14.18 1.99 3.04 4.82 4.26.67.29 1.2.47 1.61.6.68.22 1.3.19 1.79.12.55-.08 1.64-.67 1.87-1.32.23-.65.23-1.21.16-1.32-.07-.11-.25-.18-.53-.32z" />
+                  <path d="M16.02 3C8.84 3 3 8.84 3 16.02c0 2.82.74 5.58 2.14 8.01L3 29l5.13-2.06c2.36 1.29 5.02 1.98 7.89 1.98 7.18 0 13.02-5.84 13.02-13.02C29.04 8.84 23.2 3 16.02 3zm0 23.63c-2.55 0-5.05-.68-7.22-1.97l-.52-.31-3.04 1.22.99-3.13-.34-.54a10.62 10.62 0 01-1.67-5.73c0-5.87 4.78-10.65 10.65-10.65 5.87 0 10.65 4.78 10.65 10.65 0 5.87-4.78 10.65-10.65 10.65z" />
+                </svg> 
               Chat WhatsApp Sekarang
             </a>
 
