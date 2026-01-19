@@ -3,6 +3,24 @@
 import { useState } from "react";
 import Image from "next/image";
 
+/* ================= DATA ================= */
+const NAV_ITEMS = [
+  { label: "Home", href: "#home" },
+  { label: "Layanan", href: "#services" },
+  { label: "Tentang", href: "#about" },
+  { label: "Kontak", href: "#contact" },
+];
+
+const SERVICES = [
+  "Software Developer",
+  "Service Jaringan",
+  "Laptop & Komputer",
+  "CCTV",
+  "IT Support",
+  "Layanan Lainnya",
+];
+
+/* ================= COMPONENT ================= */
 export default function Home() {
   const [open, setOpen] = useState(false);
 
@@ -10,7 +28,7 @@ export default function Home() {
     <main className="bg-gray-50 text-gray-800 scroll-smooth">
 
       {/* ================= NAVBAR ================= */}
-      <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur border-b border-gray-100">
+      <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
           {/* Logo */}
@@ -29,47 +47,56 @@ export default function Home() {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center gap-10 font-medium text-gray-700">
-            {[
-              { label: "Home", href: "#home" },
-              { label: "Layanan", href: "#services" },
-              { label: "Tentang", href: "#about" },
-              { label: "Kontak", href: "#contact" },
-            ].map((item, i) => (
-              <a key={i} href={item.href} className="relative group">
+            {NAV_ITEMS.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="relative group transition-colors hover:text-blue-600"
+              >
                 {item.label}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-red-600 transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
 
             <a
               href="https://wa.me/6281236208542"
               target="_blank"
-              className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full font-semibold shadow-lg transition hover:scale-105"
+              className="bg-green-500 hover:bg-green-600 active:scale-95 text-white px-6 py-2 rounded-full font-semibold shadow-lg transition"
             >
               WhatsApp
             </a>
           </nav>
 
           {/* Mobile Button */}
-          <button onClick={() => setOpen(!open)} className="md:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          <button
+            onClick={() => setOpen(!open)}
+            className="md:hidden active:scale-95 transition"
+            aria-label="Toggle Menu"
+          >
+            <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
 
         {/* Mobile Menu */}
         {open && (
-          <div className="md:hidden bg-white shadow-lg border-t">
+          <div className="md:hidden bg-white shadow-xl border-t animate-in slide-in-from-top-2">
             <div className="px-6 py-6 flex flex-col gap-6 font-medium">
-              <a href="#home" onClick={() => setOpen(false)}>Home</a>
-              <a href="#services" onClick={() => setOpen(false)}>Layanan</a>
-              <a href="#about" onClick={() => setOpen(false)}>Tentang</a>
-              <a href="#contact" onClick={() => setOpen(false)}>Kontak</a>
+              {NAV_ITEMS.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="active:scale-95 transition"
+                >
+                  {item.label}
+                </a>
+              ))}
 
               <a
                 href="https://wa.me/6281236208542"
-                className="bg-green-500 text-white text-center py-3 rounded-full font-semibold"
+                className="bg-green-500 text-white text-center py-3 rounded-full font-semibold shadow-md active:scale-95 transition"
               >
                 Hubungi via WhatsApp
               </a>
@@ -81,29 +108,33 @@ export default function Home() {
       {/* ================= HERO ================= */}
       <section
         id="home"
-        className="pt-40 pb-32 bg-gradient-to-r from-blue-600 to-red-600 text-white"
+        className="relative overflow-hidden pt-40 pb-32 bg-gradient-to-r from-blue-600 to-red-600 text-white"
       >
-        <div className="max-w-7xl mx-auto px-6 text-center">
+        {/* Glow */}
+        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,white,transparent_60%)]" />
+
+        <div className="relative max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-            Solusi IT Profesional<br />
-            <span className="text-yellow-300">Cepat • Terpercaya</span>
+            Solusi IT Profesional
+            <br />
+            <span className="text-yellow-300">• Cepat • Terpercaya</span>
           </h1>
 
           <p className="text-lg md:text-xl opacity-95 mb-10">
-            Melayani perbaikan & pengerjaan IT untuk rumah, usaha,
-            dan kantor di <strong>Subang & sekitarnya</strong>
+            Melayani perbaikan & pengerjaan IT untuk rumah, usaha, dan kantor di{" "}
+            <strong>Subang & sekitarnya</strong>
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-5">
             <a
               href="#services"
-              className="bg-white text-blue-600 px-10 py-4 rounded-full font-semibold shadow-lg hover:scale-105 transition"
+              className="bg-white text-blue-600 px-10 py-4 rounded-full font-semibold shadow-xl hover:scale-105 active:scale-95 transition"
             >
               Lihat Layanan
             </a>
             <a
               href="https://wa.me/6281236208542"
-              className="bg-green-500 hover:bg-green-600 px-10 py-4 rounded-full font-semibold shadow-lg transition"
+              className="bg-green-500 hover:bg-green-600 px-10 py-4 rounded-full font-semibold shadow-xl hover:scale-105 active:scale-95 transition"
             >
               Konsultasi WhatsApp
             </a>
@@ -126,19 +157,12 @@ export default function Home() {
           </h3>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              "Software Developer",
-              "Service Jaringan",
-              "Laptop & Komputer",
-              "CCTV",
-              "IT Support",
-              "Layanan Lainnya",
-            ].map((title, i) => (
+            {SERVICES.map((title) => (
               <div
-                key={i}
-                className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition"
+                key={title}
+                className="group bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-blue-200 transition"
               >
-                <div className="w-12 h-12 mb-5 rounded-xl bg-gradient-to-br from-blue-600 to-red-600 text-white flex items-center justify-center font-bold">
+                <div className="w-12 h-12 mb-5 rounded-xl bg-gradient-to-br from-blue-600 to-red-600 text-white flex items-center justify-center font-bold group-hover:scale-110 transition">
                   IT
                 </div>
                 <h4 className="text-xl font-semibold mb-3">{title}</h4>
@@ -154,6 +178,7 @@ export default function Home() {
       {/* ================= ABOUT ================= */}
       <section id="about" className="py-32 bg-gray-100">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
           <div>
             <span className="text-sm font-semibold tracking-widest text-blue-600 uppercase">
               Tentang AMD COM
@@ -164,17 +189,15 @@ export default function Home() {
             </h3>
 
             <p className="text-lg text-gray-700 mb-6">
-              <strong>AMD COM</strong> melayani berbagai permasalahan IT —
-              dari software, hardware, jaringan, hingga CCTV.
+              <strong>AMD COM</strong> melayani berbagai permasalahan IT — dari software, hardware, jaringan, hingga CCTV.
             </p>
 
             <p className="text-gray-600">
-              Fokus kami adalah <strong>perbaikan nyata</strong>,
-              pengerjaan rapi, dan solusi cepat sesuai kebutuhan lapangan.
+              Fokus kami adalah <strong>perbaikan nyata</strong>, pengerjaan rapi, dan solusi cepat sesuai kebutuhan lapangan.
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-xl p-10">
+          <div className="bg-white rounded-3xl shadow-xl p-10 hover:shadow-2xl transition">
             <h4 className="text-2xl font-bold mb-8">Keunggulan Kami</h4>
 
             <ul className="space-y-4">
@@ -195,29 +218,32 @@ export default function Home() {
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
       {/* ================= CONTACT ================= */}
       <section id="contact" className="py-32">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
           <div>
             <span className="text-sm font-semibold tracking-widest text-blue-600 uppercase">
               Hubungi Kami
             </span>
 
             <h3 className="text-4xl font-extrabold mt-4 mb-6">
-              Butuh Perbaikan IT?<br />Kami Siap Membantu
+              Butuh Perbaikan IT?
+              <br />
+              Kami Siap Membantu
             </h3>
 
             <p className="text-lg text-gray-700 mb-8">
-              Laptop, komputer, jaringan, software, atau CCTV bermasalah?
-              Hubungi kami sekarang.
+              Laptop, komputer, jaringan, software, atau CCTV bermasalah? Hubungi kami sekarang.
             </p>
 
             <a
               href="https://wa.me/6281236208542"
-              className="inline-flex items-center gap-4 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg transition hover:scale-105"
+              className="inline-flex items-center gap-4 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:scale-105 active:scale-95 transition"
             >
               Chat WhatsApp Sekarang
             </a>
@@ -227,21 +253,20 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
-  
-          {/* Label Lokasi */}
-          <div className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur px-4 py-2 rounded-full shadow text-sm font-semibold text-gray-700 flex items-center gap-2">
-            📍 Lokasi AMD COM
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl hover:shadow-blue-200/40 transition border border-gray-200">
+            <div className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur px-4 py-2 rounded-full shadow text-sm font-semibold text-gray-700">
+              📍 Lokasi AMD COM
+            </div>
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d393.32047309198265!2d107.74765455588529!3d-6.562417776726212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid"
+              className="w-full h-[380px] border-0"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
 
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d393.32047309198265!2d107.74765455588529!3d-6.562417776726212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid"
-            className="w-full h-[380px] border-0"
-            loading="lazy"
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
         </div>
       </section>
 
