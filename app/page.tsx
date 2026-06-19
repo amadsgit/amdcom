@@ -59,7 +59,7 @@ export default function Home() {
             ))}
 
             <a
-              href="https://wa.me/6281236208542"
+              href="https://wa.me/6289561920873"
               target="_blank"
               className="flex items-center gap-2 bg-green-500 hover:bg-green-600 active:scale-95 
                         text-white px-6 py-2 rounded-full font-semibold shadow-lg transition"
@@ -105,7 +105,7 @@ export default function Home() {
               ))}
 
               <a
-                href="https://wa.me/6281236208542"
+                href="https://wa.me/6289561920873"
                 target="_blank"
                 className="flex items-center gap-2 bg-green-500 hover:bg-green-600 active:scale-95 
                           text-white px-6 py-2 rounded-full font-semibold shadow-lg transition"
@@ -171,7 +171,7 @@ export default function Home() {
               <span>Lihat Layanan</span>
             </a>
             <a
-              href="https://wa.me/6281236208542"
+              href="https://wa.me/6289561920873"
               className="bg-green-500 flex hover:bg-green-600 px-10 py-4 rounded-full font-semibold shadow-xl hover:scale-105 active:scale-95 transition"
             >
               <svg
@@ -289,7 +289,7 @@ export default function Home() {
             </p>
 
             <a
-              href="https://wa.me/6281236208542"
+              href="https://wa.me/6289561920873"
               className="inline-flex items-center gap-4 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:scale-105 active:scale-95 transition"
             >
               <svg
